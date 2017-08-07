@@ -13,8 +13,13 @@
 // return the result of your updateAnimal invocation
 
 // CODE HERE...
-
-
+function callBinding(arr, func, num) {
+  for (i = 0; i < arr.length; i++){
+    if (arr[i].id === num)
+      return func.call(arr[i], 'Trogdor')
+  };
+  return arr;
+}
 
 // *************
 // * PROBLEM 2 *
@@ -29,7 +34,13 @@
 
 // CODE HERE...
 
-
+function applyBinding( arr, func, num ) {
+    for (i = 0; i < arr.length; i++){
+        if (arr[i].id === num)
+            return func.apply(arr[i], ['being majestic', 'eating rainbows'])
+    };
+  return arr;
+}
 
 // *************
 // * PROBLEM 3 *
@@ -48,7 +59,6 @@
 var foo;
 
 // CODE HERE...
-
 
 
 // *************

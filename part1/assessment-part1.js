@@ -43,27 +43,27 @@ function daBears(){
 // Which function(s) access the "chair" variable and get "Too Big!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale1 = ["papaBear", "mamaBear"];
 
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale2 = ["goldilocks"];
 
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale3 = ["mamaBear"];
 
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale4 = ["daBears", "papaBear", "mamaBear", "goldilocks"];
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear"];
 
 
 // *************
@@ -83,8 +83,20 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 // CODE HERE...
 
+function Vehicle(car) {
+  this.gasRemaining = 100;
+}
 
+Vehicle.prototype.drive = function(){
+  this.gasRemaining = this.gasRemaining-25;
+}
 
+charger = new Vehicle()
+mustang = new Vehicle()
+
+charger.drive()
+mustang.drive()
+mustang.drive()
 
 
 // -----------------------------------------------------------------------------
@@ -104,10 +116,21 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 // Your method may be passed punctuation, numbers or other non-letter characters
 // and should neither modify them nor break when encountering them.
 
-
-
-
 // CODE HERE...
+
+String.prototype.grammarPolice = function() {
+  var arr = this.split(' ')
+  var str = ''
+  var newArr = []
+  
+  for(var i = 0; i < arr.length; i++) {
+    str = arr[i].toLowerCase().split('')
+    str[0] = str[0].toUpperCase()
+    newArr.push(str.join(''))
+  }
+  
+  return newArr.join(' ');
+}
 
 
 
@@ -127,6 +150,10 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 // CODE HERE...
 
+function valueType( a, b ){
+  return a === b ? "Exactly the same" : a == b ? "Same value, different types" : "Different values"
+}
+
 
 
 // *************
@@ -141,3 +168,15 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 var theAnswer = "Unknown";
 
 // CODE HERE...
+
+function promiseCatcher( a ) {
+  a.then(function(result) {
+    return theAnswer = result
+  })
+}
+
+
+
+
+
+
