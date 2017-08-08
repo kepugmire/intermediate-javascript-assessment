@@ -61,6 +61,7 @@ var foo;
 // CODE HERE...
 
 
+
 // *************
 // * PROBLEM 4 *
 // *************
@@ -73,4 +74,13 @@ var foo;
 // Make an array of emails (array of strings) from the returned data (You will need to console log or debug to figure this out),
 // and then resolve the array as you complete your promise.
 
+var emails;
 // CODE HERE...
+
+function promiseMe($q) {
+  var deffered = $q.defer()
+
+  setTimeOut...?
+  // .resolve()
+  return deffered.promise
+}

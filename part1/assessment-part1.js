@@ -170,7 +170,7 @@ var theAnswer = "Unknown";
 // CODE HERE...
 
 function promiseCatcher( a ) {
-  a.then(function(result) {
+  a.then(function( result ) {
     return theAnswer = result
   })
 }
